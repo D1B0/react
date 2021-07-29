@@ -1,0 +1,14 @@
+.app {
+    border-radius: 10px;
+    background-color: red;
+}
+
+.app header {
+    border: 2px solid blue;
+}
+.message{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
