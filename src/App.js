@@ -7,20 +7,18 @@ function App() {
     const [text, setText] = useState("")
     const [value, setValue] = useState("")
     const [messagesList, setMessagesList] = useState([])
-    const [count, setCount] = useState(0)
 
     const handleSendMessage = () => {
         if (!value || !text) {
             return
         } else {
             setMessagesList((state) => [...state, {id: new Date().getTime(), author: value, text: text}])
-            setCount(count + 1)
             setText("")
             setValue("")
         }
     }
     useEffect(() => {
-        if (count === 0 || messagesList[messagesList.length - 1].author === "bot") {
+        if (messagesList.length === 0 || messagesList[messagesList.length - 1].author === "bot") {
             return
         } else {
             setTimeout(() => {
@@ -33,7 +31,7 @@ function App() {
             }, 1500)
         }
 
-    }, [count, messagesList])
+    }, [messagesList])
 
     return (
         <div>
