@@ -2,7 +2,7 @@ import {useEffect, useState, useRef} from 'react';
 import {Button, TextField} from '@material-ui/core';
 
 export const MessageList = ({name}) => {
-    const ref = useRef (null)
+    const forwardRef = useRef (null)
     const [author, setAuthor] = useState ("")
     const [text, setText] = useState ("")
     const [messagesList, setMessagesList] = useState ([])
@@ -13,7 +13,7 @@ export const MessageList = ({name}) => {
         setMessagesList ((state) => [...state, {id: new Date ().getTime (), author: author, text: text}])
         setAuthor ("")
         setText ("")
-        ref.current.focus ()
+        forwardRef.current.focus ()
     }
     useEffect (() => {
         if (messagesList.length === 0 || messagesList[messagesList.length - 1].author === "bot") {
@@ -46,7 +46,7 @@ export const MessageList = ({name}) => {
                     onChange={(e) => setAuthor (e.target.value)}/>
                 <h3>Message</h3>
                 <TextField
-                    inputRef={ref}
+                    inputRef={forwardRef}
                     autoFocus
                     id="outlined-basic"
                     label="Message"
