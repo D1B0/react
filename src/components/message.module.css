@@ -1,6 +1,7 @@
-.message{
+.message {
     font-family: sans-serif;
     font-size: 20px;
-    color: white;
-    text-align: center;
+    color: black;
+    text-align: left;
+    margin-left: 30px;
 }

@@ -1,5 +1,5 @@
 import styles from "./message.module.css";
 
-export function Message(props) {
-    return <h1 className={styles.message}>Привет, {props.message}</h1>;
+export function Message({author, text}) {
+    return <h1 className={styles.message}>{author}: {text} </h1>;
 }
