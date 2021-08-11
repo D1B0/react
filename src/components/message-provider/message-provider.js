@@ -4,8 +4,8 @@ import {useParams} from "react-router-dom"
 export function MessageProvider ({children}) {
     const {roomId} = useParams ()
     const [conversations] = useState ([
-        {title: "room1", value: ""},
-        {title: "room2", value: ""}
+        {title: "room1"},
+        {title: "room2"}
     ])
     const [messages, setMessages] = useState ({
         room1: [],
@@ -16,9 +16,6 @@ export function MessageProvider ({children}) {
             conversations,
             allMessages: messages,
             messages: messages[roomId] || [],
-            value:
-                conversations.find ((conversation) => conversation.title === roomId)
-                    ?.value || "",
             hasRoomById: Object.keys (messages).some ((room) => room === roomId)
         }
     }, [conversations, messages, roomId])
