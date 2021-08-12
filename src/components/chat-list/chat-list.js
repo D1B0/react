@@ -1,25 +1,25 @@
-import {useState} from 'react';
-import {List, ListItem, ListItemText} from '@material-ui/core';
+import { List } from "@material-ui/core"
+import { Link, useParams } from "react-router-dom"
+import { Chat } from "./chat"
 
-export const ChatList = () => {
-    const [chat] = useState ([
-            {id: 1, name: "JoJo fans"},
-            {id: 2, name: "Naruto fans"},
-            {id: 3, name: "Gachimuchi fans"}
-        ]
-    )
-    return <div>
+export const ChatList = ({ conversations, allMessages }) => {
+  const { roomId } = useParams()
 
-        <List>
-            {chat.map (chat =>
-                <ListItem key={chat.id}
-                          button>
-                    <ListItemText primary={chat.name}
+  return (
+    <List component="nav">
+      {conversations.map((chat, index) => {
+        const currentMessages = allMessages[chat.title]
 
-                                  text={chat.name}/>
-                </ListItem>
-            )}
-        </List>
-
-    </div>
+        return (
+          <Link key={index} to={`/chat/${chat.title}`}>
+            <Chat
+              title={chat.title}
+              selected={roomId === chat.title}
+              lastMessage={currentMessages[currentMessages.length - 1]}
+            />
+          </Link>
+        )
+      })}
+    </List>
+  )
 }
