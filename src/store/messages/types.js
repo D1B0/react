@@ -1,0 +1,1 @@
+export const ADD_NEW_MESSAGE = "@profile/add new message"
