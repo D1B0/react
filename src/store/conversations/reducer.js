@@ -9,7 +9,7 @@ export const roomReducer = (state = initialState, action) => {
         case ADD_NEW_ROOM:
             return {
                 ...state,
-                rooms: [...state.rooms, {title: `room${state.rooms.length + 1}`}]
+                rooms: [...state.rooms, {title: action.payload}]
             }
         case DELETE_ROOM: {
             return {
