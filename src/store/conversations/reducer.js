@@ -1,4 +1,4 @@
-import {ADD_NEW_ROOM} from './types';
+import {ADD_NEW_ROOM, DELETE_ROOM} from './types';
 
 const initialState = {
     rooms: [{title: "room1"},
@@ -11,6 +11,11 @@ export const roomReducer = (state = initialState, action) => {
                 ...state,
                 rooms: [...state.rooms, {title: `room${state.rooms.length + 1}`}]
             }
+        case DELETE_ROOM: {
+            return {
+                ...state, rooms: state.rooms.filter (el => el.title !== action.payload)
+            }
+        }
         default:
             return state
     }
