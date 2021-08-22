@@ -1,0 +1,5 @@
+export const ADD_NEW_ROOM = "@conversation/add new room"
+export const DELETE_ROOM = "@conversation/delete room"
+export const SHOW_ADDER = "@conversation/show modal"
+export const SHOW_ADDER_WITH_NAME = "@conversation/show name"
+export const EDIT_ROOM = "@conversation/edit room"
