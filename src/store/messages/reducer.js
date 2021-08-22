@@ -1,4 +1,4 @@
-import {ADD_NEW_ROOM, DELETE_ROOM, EDIT_ROOM} from '../conversations/types';
+import {ADD_NEW_ROOM, DELETE_ROOM, EDIT_ROOM} from '../conversations';
 import {
     ADD_NEW_MESSAGE,
     CLEAR_MESSAGE_TEXT,
@@ -20,7 +20,9 @@ export const messageReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_NEW_ROOM:
             return {
-                ...state, [action.payload]: []
+                ...state, messages: {
+                    ...state.messages, [action.payload]: []
+                }
             }
         case HANDLE_CHANGE_TEXT_MESSAGE: {
             return {
