@@ -32,7 +32,7 @@ export const roomReducer = (state = initialState, action) => {
             return {
                 ...state, nameRoom: '', rooms: state.rooms.map (el => {
                     if (el.title === action.payload.room) {
-                        return {title: action.payload.nameRoom}
+                        return {...el, title: action.payload.nameRoom}
                     }
                     return el
                 })
