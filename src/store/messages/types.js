@@ -1,0 +1,6 @@
+export const ADD_NEW_MESSAGE = "@message/add new message"
+export const HANDLE_CHANGE_TEXT_MESSAGE = "@message/change text"
+export const CLEAR_MESSAGE_TEXT = "@message/clear message text"
+export const START_EDIT_MESSAGE = "@message/start edit"
+export const COMPLETE_EDIT_MESSAGE = "@message/complete edit message"
+export const DELETE_MESSAGE = "@message/delete message"
