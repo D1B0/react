@@ -63,6 +63,7 @@ export const deleteMessageFB = (room, id) => (dispatch) => {
     try {
         dispatch (startAction ())
         db.ref ("messages").child (room).child (id).remove ()
+        dispatch (getAllMessageList ())
         dispatch (addMessageList ())
         dispatch (successAction ())
     } catch
