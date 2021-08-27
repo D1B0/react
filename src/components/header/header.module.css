@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+    background: #435564;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.head {
+    margin-left: 50px;
+    display: flex;
+    width: 500px;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.profile {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 40px;
+}
+
+.exit {
+    cursor: pointer;
+}
