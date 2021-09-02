@@ -1,0 +1,6 @@
+export const GET_CONVERSATIONS = "@conversation/get conversation fb"
+export const SHOW_MODAL_WINDOW = "@conversation/show modal window"
+export const HANDLE_CHANGE_VALUE = "@conversation/handle change value"
+export const ADD_ROOM = "@conversation/add room"
+export const DELETE_ROOM = "@conversation/delete room"
+export const EDIT_ROOM = "@conversation/edit room"
