@@ -1,0 +1,12 @@
+.btn_chat_add {
+    display: flex;
+    width: 336px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    background: lightslategrey;
+    color: white;
+    border-radius: 10px;
+}
